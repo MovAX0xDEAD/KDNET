@@ -4,9 +4,9 @@ Supported Netcards: <http://go.microsoft.com/fwlink/p/?linkid=230754>
 
 1)  Need Microsoft Debuggers And Tools x86 for Windows 8.1 (WinDBG v6.3.9600.xxxxx), can be taken from Windows 8.1 WDK or downloaded directly
 
-2)  Need original files from Window 8.1 ISO (boot.wim/install.wim archives), only version "6.3.9600.17276 ENGLISH" supported
-    These files copyrighted/owned by Microsoft and before using it you must agree with Microsoft EULAs/Rules/Licenses/etc
-    One of files need to modify for become compatible with Windows XP/2003 and you take all RISKs & Liabilities to do this
+2)  Need original files from Window 8.1 ISO (boot.wim/install.wim archives), only version "6.3.9600.17276 ENGLISH" supported.
+    These files copyrighted/owned by Microsoft and before using it you must agree with Microsoft EULAs/Rules/Licenses/etc.
+    One of files need to modify for become compatible with Windows XP/2003 and you take all RISKs & Liabilities to do this.
 
 * `kdnet.dll       - (sha1 54bef4f1c508eeec84b20334eea5b3f9154e2edd)`
 * `kd_02_14e4.dll` - Broadcom
@@ -40,17 +40,17 @@ C:\WINDOWS="KDNET_Brk" /noexecute=optin /fastdetect /DEBUG /DEBUGPORT=NET /HOST_
 Host -  machine where WinDBG/KD started
 Target - debuggee machine
 
-**noexecute=optin** (optout, disabled) - copy this setting from existing boot.ini
-**HOST_IP** - IP of Host
-**HOST_PORT** - UDP Port of WinDBG/KD on Host, must be higher 49152
-**ENCRYPTION_KEY** - text password, any four words separated by dots
-**CPUFREQ** - declare nominal frequency of your CPU in Mhz (without turbomode and other speedups)
+noexecute=optin (optout, disabled) - copy this setting from existing boot.ini.
+HOST_IP - IP of Host.
+HOST_PORT - UDP Port of WinDBG/KD on Host, must be higher 49152 .
+ENCRYPTION_KEY - text password, any four words separated by dots.
+CPUFREQ - declare nominal frequency of your CPU in Mhz (without turbomode and other speedups).
 
 Optional:
-**BREAK** - instant stop at INT3 opcode, if netcard was not intialized properly by kdnet/kdstub, Target will be rebooted
-**TARGET_IP** - By default Target get own IP from DHCP on your network, this option disable DHCP and force to use this IP
-**W2003** - set for Windows 2003 or mixed OS like "Windows XP + Windows 2003's hal.dll"
-**PAE/NOPAE** - select kernel with/out PAE
+BREAK - instant stop at INT3 opcode, if netcard was not intialized properly by kdnet/kdstub, Target will be rebooted.
+TARGET_IP - By default Target get own IP from DHCP on your network, this option disable DHCP and force to use this IP.
+W2003 - set for Windows 2003 or mixed OS like "Windows XP + Windows 2003's hal.dll".
+PAE/NOPAE - select kernel with/out PAE.
 
 8)  Disable firewall at Host on choosen UDP Port
 
@@ -66,7 +66,7 @@ Optional:
 
 
 
-##Tips & Tricks:
+# Tips & Tricks:
 - To run WinDBG v6.3.9600.xxxxx on Windows XP/2003, you need newer msvcrt.dll, one of these project: <http://blog.livedoor.jp/blackwingcat/archives/1706829.html>
 
 - To fix empty Register window of WinDBG, patch dbgeng.dll 6.3.9600.17200 (size= 2865840):

@@ -3,9 +3,9 @@ Kernel Debugging over LAN cable for Windows XP/2003 x32
 
 Supported Netcards: <http://go.microsoft.com/fwlink/p/?linkid=230754>
 
-1) Need Microsoft Debuggers And Tools x86 for Windows 8.1 (WinDBG v6.3.9600.xxxxx), can be taken from Windows 8.1 WDK or downloaded directly
+1) Need `Microsoft Debuggers And Tools x86` for Windows 8.1 (WinDBG v6.3.9600.xxxxx), can be taken from Windows 8.1 WDK or downloaded directly
 
-2) Need original files from Window 8.1 ISO (boot.wim/install.wim archives), only version "6.3.9600.17276 ENGLISH" supported
+2) Need original files from Window 8.1 ISO (boot.wim/install.wim archives), only version `6.3.9600.17276 ENGLISH` supported
 
    These files copyrighted/owned by Microsoft and before using it you must agree with Microsoft EULAs/Rules/Licenses/etc
 
@@ -35,32 +35,32 @@ Supported Netcards: <http://go.microsoft.com/fwlink/p/?linkid=230754>
 6) Select one of `kd_02_XXXX.dll` and rename to `kdstub.dll`, place `kdstub.dll` to folder `Windows\system32\`
 
 7) Add new lines to boot.ini to section [operating systems]:
-     (**Host** -  machine where WinDBG/KD started. **Target** - debuggee machine)
+  (**Host** -  machine where WinDBG/KD started. **Target** - debuggee machine)
 
        C:\WINDOWS="KDNET"     /noexecute=optin /fastdetect /DEBUG /DEBUGPORT=NET /HOST_IP=192.168.5.1 /HOST_PORT=50000 /ENCRYPTION_KEY=make.winxp.great.again /CPUFREQ=3000 /TARGET_IP=192.168.5.2
        C:\WINDOWS="KDNET_Brk" /noexecute=optin /fastdetect /DEBUG /DEBUGPORT=NET /HOST_IP=192.168.5.1 /HOST_PORT=50000 /ENCRYPTION_KEY=make.winxp.great.again /CPUFREQ=3000 /TARGET_IP=192.168.5.2 /BREAK
 
-**/noexecute=optin** (optout, disabled) - copy this setting from existing boot.ini
+* **/noexecute=optin** (optout, disabled) - copy this setting from existing boot.ini
 
-**/HOST_IP** - IP of Host
+* **/HOST_IP** - IP of Host
 
-**/HOST_PORT** - UDP Port of WinDBG/KD on Host, must be higher 49152
+* **/HOST_PORT** - UDP Port of WinDBG/KD on Host, must be higher 49152
 
-**/ENCRYPTION_KEY** - text password, any four words separated by dots
+* **/ENCRYPTION_KEY** - text password, any four words separated by dots
 
-**/CPUFREQ** - declare nominal frequency of your CPU in Mhz (without turbomode and other speedups)
+* **/CPUFREQ** - declare nominal frequency of your CPU in Mhz (without turbomode and other speedups)
 
 Optional:
 
-**/BREAK** - instant stop at INT3 opcode, if netcard was not intialized properly by kdnet/kdstub, Target will be rebooted
+* **/BREAK** - instant stop at INT3 opcode, if netcard was not intialized properly by kdnet/kdstub, Target will be rebooted
 
-**/TARGET_IP** - By default Target get own IP from DHCP on your network, this option disable DHCP and force to use this IP
+* **/TARGET_IP** - By default Target get own IP from DHCP on your network, this option disable DHCP and force to use this IP
 
-**/W2003** - set for Windows 2003 or mixed OS like "Windows XP + Windows 2003's hal.dll"
+* **/W2003** - set for Windows 2003 or mixed OS like "Windows XP + Windows 2003's hal.dll"
 
-**/PAE /NOPAE** - select kernel with/out PAE
+* **/PAE /NOPAE** - select kernel with/out PAE
 
-**/BUSPARAMS=4.25.8** - When you have more than 1 netcard, look in Device Manager and search there for your used lan card, here for example PCI-Bus 4, Device 25, Function 8. This option force to use only this netcard
+* **/BUSPARAMS=4.25.8** - When you have more than 1 netcard, look in Device Manager and search there for your used lan card, here for example PCI-Bus 4, Device 25, Function 8. This option force to use only this netcard
 
 8) Disable firewall at Host on choosen UDP Port
 

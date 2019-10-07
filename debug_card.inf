@@ -1,0 +1,31 @@
+; ********************************************************************************
+; ********************************************************************************
+; Dummy INF for Debug PCI Netcard
+; ********************************************************************************
+; ********************************************************************************
+
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGUID={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%Provider%
+DriverVer=10/10/2010, 1.0
+
+[ControlFlags]
+
+[Manufacturer]
+%Provider%=Provider
+
+[Provider]
+%PCI\VEN_DEAD&DEV_BEEF.DeviceDesc%=NO_DRV,PCI\VEN_DEAD&DEV_BEEF
+
+[NO_DRV]
+
+[NO_DRV.Services]
+AddService = , %SPSVCINST_ASSOCSERVICE%
+
+[Strings]
+Provider="Unknow"
+PCI\VEN_DEAD&DEV_BEEF.DeviceDesc="Debug PCI Netcard"
+SPSVCINST_ASSOCSERVICE = 0x00000002

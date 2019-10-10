@@ -100,31 +100,20 @@ Hardware requirements:
 
 **Do not use cables from external HDD or pci-express raisers, they are not debugging cables and probably will burn you devices !**
 
-`Pinout Reference:
+Pinout Reference:
 
-PINOUT   |    SIGNAL NAME   |   DESC                       |   WIRE COLOR
-
----------|------------------|------------------------------|-------------
-
-1     1  |    1 +5V         |   NO CONNECTION !            |
-
-2     2  |    2 USB2 +      |   NO CONNECTION !            |
-
-3     3  |    3 USB2 -      |   NO CONNECTION !            |
-
-4-----4  |    4 GND GROUND  |   FOR POWER RETURN           |   BLACK
-
-5-----8  |    5 StdA_SSRX-  |   SUPERSPEED REC DIFF PAIR   |   BLUE
-
-6-----9  |    6 StdA_SSRX+  |   SUPERSPEED REC DIFF PAIR   |   YELLOW
-
-7-----7  |    7 GND_DRAIN   |   GROUND FOR SIGNAL RETURN   |
-
-8-----5  |    8 StdA_SSTX-  |   SUPERSPEED TRANS DIFF PAIR |   PURPLE
-
-9-----6  |    9 StdA_SSTX+  |   SUPERSPEED TRANS DIFF PAIR |   ORANGE
-
-Sh---Sh  |      SHIELD      |   CONNECTOR METAL SHELL      |`
+     PINOUT   |    SIGNAL NAME   |   DESC                       |   WIRE COLOR
+     ---------|------------------|------------------------------|-------------
+     1     1  |    1 +5V         |   NO CONNECTION !            |
+     2     2  |    2 USB2 +      |   NO CONNECTION !            |
+     3     3  |    3 USB2 -      |   NO CONNECTION !            |
+     4-----4  |    4 GND GROUND  |   FOR POWER RETURN           |   BLACK
+     5-----8  |    5 StdA_SSRX-  |   SUPERSPEED REC DIFF PAIR   |   BLUE
+     6-----9  |    6 StdA_SSRX+  |   SUPERSPEED REC DIFF PAIR   |   YELLOW
+     7-----7  |    7 GND_DRAIN   |   GROUND FOR SIGNAL RETURN   |
+     8-----5  |    8 StdA_SSTX-  |   SUPERSPEED TRANS DIFF PAIR |   PURPLE
+     9-----6  |    9 StdA_SSTX+  |   SUPERSPEED TRANS DIFF PAIR |   ORANGE
+     Sh---Sh  |      SHIELD      |   CONNECTOR METAL SHELL      |
 
 2) Only USB3.0 onboard ports/controller supported, external cards may not work properly even with original windows 8 debugging
 

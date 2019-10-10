@@ -97,9 +97,10 @@ Kernel Debugging over USB3.0 Debugging cable for Windows XP/2003 x32
 Hardware requirements:
 
 1) Special **USB3.0 Debugging Cable**, it is cross-cable with disconnected usb2.0 signal and +5V
+
 **Do not use cables from external HDD or pci-express raisers, they are not debugging cables and probably will burn you devices !**
 
-Pinout Reference:
+`Pinout Reference:
 PINOUT   |    SIGNAL NAME   |   DESC                       |   WIRE COLOR
 ---------|------------------|------------------------------|-------------
 1     1  |    1 +5V         |   NO CONNECTION !            |
@@ -111,7 +112,7 @@ PINOUT   |    SIGNAL NAME   |   DESC                       |   WIRE COLOR
 7-----7  |    7 GND_DRAIN   |   GROUND FOR SIGNAL RETURN   |
 8-----5  |    8 StdA_SSTX-  |   SUPERSPEED TRANS DIFF PAIR |   PURPLE
 9-----6  |    9 StdA_SSTX+  |   SUPERSPEED TRANS DIFF PAIR |   ORANGE
-Sh---Sh  |      SHIELD      |   CONNECTOR METAL SHELL      |
+Sh---Sh  |      SHIELD      |   CONNECTOR METAL SHELL      |`
 
 2) Only USB3.0 onboard ports/controller supported, external cards may not work properly even with original windows 8 debugging
 
@@ -169,7 +170,7 @@ Optional:
 * **/BUSPARAMS=4.25.8** - When you have more than 1 usb3 controller, look in Device Manager and search there for your used usb3 controller, here for example PCI-Bus 4, Device 25, Function 8. This option force to use only this controller
 
 
-8) Connect both PC by `usb3.0 debugging cable`
+8) Connect both PC by USB3.0 debugging cable
 
 9) Run WinDBG/KD on Host, select Kernel Debug, enter USB name
 

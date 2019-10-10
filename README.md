@@ -133,7 +133,7 @@ Software requirements:
 
    One of files need to modify for become compatible with Windows XP/2003 and you take all RISKs & Liabilities to do this
 
-        kdusb.dll       - (v6.3.9600.17399 sha1=54bef4f1c508eeec84b20334eea5b3f9154e2edd)`
+        kdusb.dll       - (v6.3.9600.17399 sha1=e14b8134178dcbba92a9fe056278838bf2f3bed4)`
 
 4) Download from project:
 

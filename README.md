@@ -96,7 +96,7 @@ Kernel Debugging over USB3.0 Debugging cable for Windows XP/2003 x32
 
 Hardware requirements:
 
-1) Special **USB3.0 Debugging Cable**, it is cross-cable with disconnected usb2.0 signal and +5V
+1) Special **USB3.0 Debugging Cable**, it is cross-cable with disconnected usb2.0 signals/+5V
 
 **Do not use cables from external HDD or pci-express raisers, they are not debugging cables and probably will burn you devices !**
 
@@ -105,8 +105,8 @@ Pinout Reference:
      PINOUT   |    SIGNAL NAME   |   DESC                       |   WIRE COLOR
      ---------|------------------|------------------------------|-------------
      1     1  |    1 +5V         |   NO CONNECTION !            |
-     2     2  |    2 USB2 +      |   NO CONNECTION !            |
-     3     3  |    3 USB2 -      |   NO CONNECTION !            |
+     2     2  |    2 USB2 -      |   NO CONNECTION !            |
+     3     3  |    3 USB2 +      |   NO CONNECTION !            |
      4-----4  |    4 GND GROUND  |   FOR POWER RETURN           |   BLACK
      5-----8  |    5 StdA_SSRX-  |   SUPERSPEED REC DIFF PAIR   |   BLUE
      6-----9  |    6 StdA_SSRX+  |   SUPERSPEED REC DIFF PAIR   |   YELLOW
@@ -123,7 +123,7 @@ Pinout Reference:
 
 Software requirements:
 
-1) On Target PC need Windows 8/10 to be installed with Microsoft drivers for USB3.0 controllers (Vendor's usb3.0 drivers not supported by WinDBG/KD)
+1) PC with Windows 8/10 and Microsoft drivers for USB3.0 controller (Vendor's usb3.0 drivers not supported by WinDBG/KD)
 
 2) `Microsoft Debuggers And Tools x86` for Windows 8.1 (WinDBG v6.3.9600.xxxxx), can be taken from Windows 8.1 WDK or downloaded directly
 

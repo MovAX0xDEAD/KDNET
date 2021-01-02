@@ -1,0 +1,26 @@
+#########################################################################
+USE_NOLIBS=1
+BUFFER_OVERFLOW_CHECKS=0
+
+USER_C_FLAGS=     $(USER_C_FLAGS) /FAs /Faasm/ 
+
+MSC_OPTIMIZATION= $(MSC_OPTIMIZATION) /O2
+
+#########################################################################
+
+
+TARGETNAME=kdstub
+TARGETTYPE=HAL
+TARGETPATH=obj$(BUILD_ALT_DIR)
+
+TARGETLIBS= $(DDK_LIB_PATH)\int64.lib          \
+            $(DDK_LIB_PATH)\ntoskrnl.lib       \
+                         ..\kdnet10.lib
+
+
+
+INCLUDES=   $(INCLUDES) $(DDK_INC_PATH)
+
+SOURCES=   ..\kdstub.c
+
+DLLDEF=$(OBJ_PATH)\$(O)\kdstub.def

@@ -1,0 +1,13 @@
+NAME kdstub.dll
+
+EXPORTS
+    KdInitializeLibrary = _KdInitializeLibrary
+    KdShutdownController
+    KdSetHibernateRange
+    KdGetRxPacket
+    KdReleaseRxPacket
+    KdGetTxPacket
+    KdSendTxPacket
+    KdGetPacketAddress
+    KdGetPacketLength
+    KdInitializeController

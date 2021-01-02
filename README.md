@@ -4,14 +4,17 @@ Kernel Debugging over LAN cable for Windows XP/2003 x32
 Hardware requirements:
 
 KDNET patcher support "Debug LAN drivers" from Windows 8.1 or Windows10
-1) Option A (Windows 8.1) Supported Netcards: <http://go.microsoft.com/fwlink/p/?linkid=230754>
-2) Option B (Windows 10 ) Supported Netcards: <http://go.microsoft.com/fwlink/p/?linkid=>
+
+1) `Option A` (Windows 8.1) Supported Netcards: <http://go.microsoft.com/fwlink/p/?linkid=230754>
+2) `Option B` (Windows 10 ) Supported Netcards: <https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/supported-ethernet-nics-for-network-kernel-debugging-in-windows-10>
+
 
 Software requirements:
 
 1) `Microsoft Debuggers And Tools x86` for Windows 8.1 (WinDBG v6.3.9600.xxxxx), can be taken from Windows 8.1 WDK or downloaded directly
 
-2) Option A:
+2)
+   `Option A`:
    Original files from Windows 8.1 (boot.wim/install.wim or KB3000850, only kdnet.dll version `6.3.9600.17276 ENGLISH` supported )
 
    These files copyrighted/owned by Microsoft and before using it you must agree with Microsoft EULAs/Rules/Licenses/etc
@@ -25,9 +28,9 @@ Software requirements:
         kd_02_8086.dll` - Intel            (v6.3.xxxx)
         kd_02_1969.dll` - Qualcomm Atheros (v6.3.xxxx)
         kd_02_10ec.dll` - Realtek          (v6.3.xxxx)
+        kd_02_15B3.dll` - Mellanox         (v6.3.xxxx)
 
-
-   Option B:
+   `Option B`:
    Original files from Windows 8.1 (kdnet.dll from boot.wim/install.wim or KB3000850, only version `6.3.9600.17276 ENGLISH` supported)
    Original files from Windows 10  (kd_02_*.dll)
 
@@ -42,15 +45,17 @@ Software requirements:
         kd_02_8086.dll` - Intel            (v10.0.xxxx)
         kd_02_1969.dll` - Qualcomm Atheros (v10.0.xxxx)
         kd_02_10ec.dll` - Realtek          (v10.0.xxxx)
+        kd_02_15B3.dll` - Mellanox         (v10.0.xxxx)
 
 
 3) Download from project:
-   Option A:
+
+   `Option A`:
         xdelta3.exe
         kdnet_delta.bin
         debug_card.inf
 
-   Option B:
+   `Option B`:
         xdelta3.exe
         kdnet_delta.bin
         kdstub.dll
@@ -63,10 +68,11 @@ Software requirements:
 
 5) Place `kdnet.dll` to folder `Windows\system32\` of your installed Windows XP/2003
 
-6) Option A:
+6)
+   `Option A`:
    Select one of `kd_02_XXXX.dll` and rename to `kdstub.dll`, place `kdstub.dll` to folder `Windows\system32\`
 
-   Option B:
+   `Option B`:
    Select one of `kd_02_XXXX.dll` and rename to `kdnet10.dll`, place `kdstub.dll` and `kdnet10.dll` to folder `Windows\system32\`
 
 7) Add new lines to boot.ini to section [operating systems] on Target PC, use this example as template, change parameters to yours:
